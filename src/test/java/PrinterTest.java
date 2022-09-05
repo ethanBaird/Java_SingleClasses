@@ -27,6 +27,11 @@ public class PrinterTest {
         assertEquals(false, printer.print(10, 3));
     }
 
+    @Test
+    public void canPrintIfExactPaper(){
+        assertEquals(true, printer.print(10, 2));
+    }
+
 
 
 
