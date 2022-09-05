@@ -17,8 +17,10 @@ public class Printer {
     }
 
     public boolean print(int pages, int copies){
-        if (this.paper >= pages * copies){
-            this.paper -= (pages * copies);
+        int totalPaper = pages * copies;
+        if (this.paper >= totalPaper){
+            this.paper -= totalPaper;
+            this.toner -= totalPaper;
             return true;
         }
         return false;
