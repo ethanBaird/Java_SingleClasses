@@ -5,8 +5,13 @@ import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
 
+
+    Calculator calculator;
+
     @Before
-    Calculator calculator = new Calculator();
+    public void before(){
+        calculator = new Calculator();
+    }
 
     @Test
     public void canAdd(){
