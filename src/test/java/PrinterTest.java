@@ -22,7 +22,12 @@ public class PrinterTest {
         assertEquals(true, printer.print(10, 1));
     }
 
-    
+    @Test
+    public void cantPrintIfNotEnoughPaper(){
+        assertEquals(false, printer.print(10, 3));
+    }
+
+
 
 
 }
