@@ -38,6 +38,12 @@ public class PrinterTest {
         assertEquals(10, printer.getPaper());
     }
 
+    @Test
+    public void unsuccessfulPrintDoesNotAffectPaper(){
+        printer.print(10, 3);
+        assertEquals(20, printer.getPaper());
+    }
+
 
 
 
