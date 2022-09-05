@@ -50,6 +50,17 @@ public class PrinterTest {
     }
 
     @Test
+    public void canPrintIfEnoughToner() {
+        assertEquals(true, printer.print(10, 1));
+    }
+
+    @Test
+    public void cantPrintIfNotEnoughToner(){
+        Printer lowTonerPrinter = new Printer(20, 5);
+        assertEquals(false, lowTonerPrinter.print(10, 1));
+    }
+
+    @Test
     public void reducesTonerByOnePerPagePrinted() {
         printer.print(10, 1);
         assertEquals(90, printer.getToner());
@@ -60,4 +71,6 @@ public class PrinterTest {
         printer.print(10, 3);
         assertEquals(100, printer.getToner());
     }
+
+
 }
