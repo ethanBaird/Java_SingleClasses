@@ -32,6 +32,12 @@ public class PrinterTest {
         assertEquals(true, printer.print(10, 2));
     }
 
+    @Test
+    public void successfulPrintReducesPaper(){
+        printer.print(10, 1);
+        assertEquals(10, printer.getPaper());
+    }
+
 
 
 
