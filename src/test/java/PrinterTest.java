@@ -54,4 +54,10 @@ public class PrinterTest {
         printer.print(10, 1);
         assertEquals(90, printer.getToner());
     }
+
+    @Test
+    public void unsuccessfulPrintDoesNotAffectToner() {
+        printer.print(10, 3);
+        assertEquals(100, printer.getToner());
+    }
 }
